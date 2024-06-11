@@ -9,6 +9,7 @@ import {
   Button,
   useDisclosure,
   VStack,
+  HStack,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
@@ -38,21 +39,38 @@ const Header = () => {
           <DrawerHeader>MIME</DrawerHeader>
           <DrawerBody>
             <VStack alignItems={'flex-start'}>
-              <Button colorScheme="purple" variant={'ghost'}>
+              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
                 <Link to={'/'}>Home</Link>
               </Button>
-              <Button colorScheme="purple" variant={'ghost'}>
+              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
                 <Link to={'/videos'}>Video</Link>
               </Button>
-              <Button colorScheme="purple" variant={'ghost'}>
+              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
                 <Link to={'/videos?category=free'}>Free Videos</Link>
               </Button>
-              <Button colorScheme="purple" variant={'ghost'}>
+              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
                 <Link to={'/upload'}>Upload Video</Link>
               </Button>
             </VStack>
+            <HStack
+              pos={'absolute'}
+              bottom={'10'}
+              left={'0'}
+              w={'full'}
+              justifyContent={'space-evenly'}
+            >
+              <Button onClick={onClose} colorScheme="purple">
+                <Link to={'/login'}>Login</Link>
+              </Button>
+              <Button
+                onClick={onClose}
+                variant={'outline'}
+                colorScheme="purple"
+              >
+                <Link to={'/signup'}>Sign Up</Link>
+              </Button>
+            </HStack>
           </DrawerBody>
-          <div>hahaha</div>
         </DrawerContent>
       </Drawer>
     </>
