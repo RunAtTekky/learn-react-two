@@ -39,17 +39,37 @@ const Header = () => {
           <DrawerCloseButton />
           <DrawerHeader>MIME</DrawerHeader>
           <DrawerBody>
-            <VStack alignItems={'flex-start'}>
-              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
+            <VStack alignItems={'stretch'}>
+              <Button
+                justifyContent={'flex-start'}
+                onClick={onClose}
+                colorScheme="purple"
+                variant={'ghost'}
+              >
                 <Link to={'/'}>Home</Link>
               </Button>
-              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
+              <Button
+                justifyContent={'flex-start'}
+                onClick={onClose}
+                colorScheme="purple"
+                variant={'ghost'}
+              >
                 <Link to={'/videos'}>Video</Link>
               </Button>
-              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
+              <Button
+                justifyContent={'flex-start'}
+                onClick={onClose}
+                colorScheme="purple"
+                variant={'ghost'}
+              >
                 <Link to={'/videos?category=free'}>Free Videos</Link>
               </Button>
-              <Button onClick={onClose} colorScheme="purple" variant={'ghost'}>
+              <Button
+                justifyContent={'flex-start'}
+                onClick={onClose}
+                colorScheme="purple"
+                variant={'ghost'}
+              >
                 <Link to={'/upload'}>Upload Video</Link>
               </Button>
             </VStack>
