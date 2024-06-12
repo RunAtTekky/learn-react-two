@@ -29,6 +29,7 @@ const MyCarousel = () => {
       showThumbs={false}
       showArrows={false}
       stopOnHover={false}
+      swipeable={false}
     >
       <Box w={'full'} h={'100vh'}>
         <Image
