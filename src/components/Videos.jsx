@@ -10,12 +10,12 @@ const Videos = () => {
         <video
           controls
           controlsList="nodownload"
-          src={videos[videoNumber][1]}
+          src={videos[videoNumber].url}
           style={{ width: '100%' }}
         ></video>
         <VStack alignItems={'flex-start'} p={'8'} w={'full'} overflowY={'auto'}>
           <Heading textTransform={'capitalize'}>
-            {videos[videoNumber][0]}
+            {videos[videoNumber].title}
           </Heading>
         </VStack>
       </VStack>
@@ -26,7 +26,7 @@ const Videos = () => {
         spacing={'8'}
         overflowY={'auto'}
       >
-        {videos.map((item, index) => (
+        {videos.map((video, index) => (
           <Button
             onClick={() => setVideoNumber(index)}
             variant={index === videoNumber ? 'solid' : 'ghost'}
@@ -34,7 +34,7 @@ const Videos = () => {
             textTransform={'uppercase'}
             justifyContent={'flex-start'}
           >
-            {item[0]}
+            {video.title}
           </Button>
         ))}
       </VStack>
