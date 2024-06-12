@@ -10,6 +10,7 @@ import img5 from '../assets/5.png';
 
 const headingOptions = {
   pos: 'absolute',
+  w: ['100%', 'auto'],
   left: '50%',
   top: '50%',
   transform: 'translate(-50%,-50%)',
@@ -27,27 +28,52 @@ const MyCarousel = () => {
       showStatus={false}
       showThumbs={false}
       showArrows={false}
+      stopOnHover={false}
     >
       <Box w={'full'} h={'100vh'}>
-        <Image src={img1} alt="VR glasses" />
+        <Image
+          src={img1}
+          alt="VR glasses"
+          h={'full'}
+          w={'full'}
+          objectFit={'cover'}
+        />
         <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
           Watch The Future
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img2} alt="VR glasses" />
+        <Image
+          src={img2}
+          alt="PS Controllers"
+          h={'full'}
+          w={'full'}
+          objectFit={'cover'}
+        />
         <Heading bgColor={'whiteAlpha.900'} color={'black'} {...headingOptions}>
           Future Is Gaming
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img3} alt="VR glasses" />
+        <Image
+          src={img3}
+          alt="controller front view"
+          h={'full'}
+          w={'full'}
+          objectFit={'cover'}
+        />
         <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
           Gaming on Console
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img4} alt="VR glasses" />
+        <Image
+          src={img4}
+          alt="Night Moon"
+          h={'full'}
+          w={'full'}
+          objectFit={'cover'}
+        />
         <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
           Night life is cool
         </Heading>
