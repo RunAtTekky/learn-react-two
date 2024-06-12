@@ -8,13 +8,18 @@ const Videos = () => {
     <Stack direction={['column', 'row']} h={'100vh'}>
       <VStack w={'full'}>
         <video
+          autoPlay
+          loop
           controls
           controlsList="nodownload"
           src={videos[videoNumber].url}
           style={{ width: '100%' }}
         ></video>
         <VStack alignItems={'flex-start'} p={'8'} w={'full'} overflowY={'auto'}>
-          <Heading textTransform={'capitalize'}>
+          <Heading
+            borderBottom={'5px solid black'}
+            textTransform={'capitalize'}
+          >
             {videos[videoNumber].title}
           </Heading>
         </VStack>
